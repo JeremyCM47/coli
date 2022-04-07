@@ -34,6 +34,7 @@ export class ProductService {
   getProductById(id: number): Product {
     return this.product.find(product => product.id === id);
   }
+
   updateProduct(product: Product) {
     const index = this.product.findIndex(p => p.id === product.id);
     this.product[index] = product;
