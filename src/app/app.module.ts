@@ -5,19 +5,19 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ProductComponent } from './product/product.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProductComponent
+    AppComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        FontAwesomeModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    FontAwesomeModule,
+    AppRoutingModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
