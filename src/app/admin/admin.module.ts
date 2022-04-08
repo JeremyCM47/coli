@@ -5,6 +5,7 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
 import { FindAllComponent } from './find-all/find-all.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FindAllComponent } from './find-all/find-all.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FontAwesomeModule
   ]
 })
 export class AdminModule { }
