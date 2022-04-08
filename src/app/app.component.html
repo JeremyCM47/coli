@@ -1,8 +1,12 @@
 <nav class="navbar">
-  <h2>Coli</h2>
+  <h2 routerLink="/">Coli</h2>
   <div>
-    <span><fa-icon [icon]="faUser"></fa-icon></span>
-    <span><fa-icon [icon]="faCartShopping"></fa-icon></span>
+    <a routerLink="/admin" routerLinkActive="active">
+      <span><fa-icon [icon]="faUser"></fa-icon></span>
+    </a>
+    <a routerLink="/cart" routerLinkActive="active">
+      <span><fa-icon [icon]="faCartShopping"></fa-icon></span>
+    </a>
   </div>
 </nav>
 

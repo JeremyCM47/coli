@@ -1,0 +1,23 @@
+.navbar {
+  justify-content: space-between;
+  background-color: #A16735;
+  h2 {
+    margin-left: 1em;
+    align-items: center;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  a {
+    color: #ffffff;
+    span {
+      padding-right: 1em;
+    }
+    &.active {
+      color: #465884;
+    }
+  }
+
+
+}
+
+
