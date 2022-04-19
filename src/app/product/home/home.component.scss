@@ -1,3 +1,28 @@
-img {
-  width: 200px;
+.section-1 {
+  height: 400px;
+  background-image: url("https://maximumwallhd.com/wp-content/uploads/2017/07/wallpaper-image-chien-en-ete-01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -30px;
+  margin-bottom: 50px;
 }
+
+.card-group {
+  justify-content: space-around;
+  margin: 0 5%;
+  .card {
+    flex: none;
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    img {
+      width: 200px;
+      margin: auto;
+    }
+    .card-title {
+      font-weight: bold;
+    }
+  }
+}
+
+

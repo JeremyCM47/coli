@@ -1,19 +1,17 @@
 <ng-container>
-    <div class="container">
-        <div class="row">
-            <div class="card-columns">
-              <div class="card" *ngFor="let product of products">
-                <img class="card-img-top" src="{{product.imageUrl}}" alt="{{product.name}}">
-                <div class="card-body">
-                  <h3 class="card-title">{{product.name}}</h3>
-                  <p class="card-text">{{product.description}}</p>
-                  <a routerLink="/product" [queryParams]="{id:product.id}">
-                    <button class="btn btn-primary">Détails</button>
-                  </a>
-                </div>
-              </div>
-
-            </div>
+  <div class="section-1"></div>
+  <div class="container">
+    <div class="card-group">
+      <div class="card" *ngFor="let product of products">
+        <img class="card-img-top" src="{{product.imageUrl}}" alt="{{product.name}}">
+        <div class="card-body">
+          <h3 class="card-title">{{product.name}}</h3>
+          <p class="card-text">{{product.description}}</p>
+          <a routerLink="/product" [queryParams]="{id:product.id}">
+            <button class="btn btn-primary">Détails</button>
+          </a>
         </div>
+      </div>
     </div>
+  </div>
 </ng-container>
