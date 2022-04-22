@@ -3,62 +3,50 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Create Product</h4>
+          <h4 class="card-title">Ajouter un produit</h4>
         </div>
         <div class="card-body">
-            <form [formGroup]="createProductForm" (ngSubmit)="onSubmit()">
-              <div class="form-group">
-                <label for="name">Nom du produit</label>
-                <input type="text" class="form-control" id="name" formControlName="name"
-                       placeholder="Entrer un nom de produit">
-                <div *ngIf="createProductForm.get('name').invalid && (createProductForm.get('name').dirty || createProductForm.get('name').touched)"
-                     class="alert alert-danger">
-<!--                  <div *ngIf="createProductForm.name.hasError('required')">-->
-<!--                    Donner un nom au produit est requis-->
-<!--                  </div>-->
-                </div>
+          <form [formGroup]="createProductForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="name">Nom du produit</label>
+              <input type="text" class="form-control" id="name" formControlName="name"
+                     placeholder="Entrer un nom de produit">
+              <div
+                *ngIf="createProductForm.get('name').invalid && (createProductForm.get('name').dirty || createProductForm.get('name').touched)"
+                class="alert alert-danger">
+                <span>Le champs ne doit pas être vide</span>
               </div>
-              <div class="form-group mt-3">
-                <label for="price">Price</label>
-                <input type="number" class="form-control" id="price" formControlName="price"
-                       placeholder="Entrer le prix du produit">
-<!--                <div *ngIf="createProductForm.get('price').invalid && (createProductForm.get('price').dirty || createProductForm.get('price').touched)"-->
-<!--                     class="alert alert-danger">-->
-<!--                  <div *ngIf="createProductForm.get('price').errors.required">-->
-<!--                    Price is required-->
-<!--                  </div>-->
-<!--                  <div *ngIf="createProductForm.get('price').errors.min">-->
-<!--                    Price must be greater than 0-->
-<!--                  </div>-->
-<!--                </div>-->
+            </div>
+            <div class="form-group mt-3">
+              <label for="price">Prix</label>
+              <input type="number" class="form-control" id="price" formControlName="price"
+                     placeholder="Entrer le prix du produit">
+              <div
+                *ngIf="createProductForm.get('price').invalid && (createProductForm.get('price').dirty || createProductForm.get('price').touched)"
+                class="alert alert-danger">
+                <span>Le champs ne doit pas être vide</span>
               </div>
-              <div class="form-group mt-3">
-                <label for="description">Description</label>
-                <textarea class="form-control" id="description" formControlName="description"
-                          placeholder="Description du produit"></textarea>
-<!--                <div-->
-<!--                  *ngIf="createProductForm.get('description').invalid && (createProductForm.get('description').dirty || createProductForm.get('description').touched)"-->
-<!--                  class="alert alert-danger">-->
-<!--                  <div *ngIf="createProductForm.get('description').errors.required">-->
-<!--                    Description is required-->
-<!--                  </div>-->
-<!--                </div>-->
+            </div>
+            <div class="form-group mt-3">
+              <label for="description">Description</label>
+              <textarea class="form-control" id="description" formControlName="description"
+                        placeholder="Description du produit"></textarea>
+              <div *ngIf="createProductForm.get('description').invalid && (createProductForm.get('description').dirty || createProductForm.get('description').touched)"
+                   class="alert alert-danger">
+                <span>Le champs ne doit pas être vide</span>
               </div>
-              <div class="form-group mt-3">
-                <label for="description">URL de l'image</label>
-                <input type="text" class="form-control" id="imageUrl" formControlName="imageUrl"
-                          placeholder="Url de l'image du produit">
-<!--                <div-->
-<!--                  *ngIf="createProductForm.get('description').invalid && (createProductForm.get('description').dirty || createProductForm.get('description').touched)"-->
-<!--                  class="alert alert-danger">-->
-<!--                  <div *ngIf="createProductForm.get('description').errors.required">-->
-<!--                    Description is required-->
-<!--                  </div>-->
-<!--                </div>-->
+            </div>
+            <div class="form-group mt-3">
+              <label for="description">URL de l'image</label>
+              <input type="text" class="form-control" id="imageUrl" formControlName="imageUrl"
+                     placeholder="Url de l'image du produit">
+              <div *ngIf="createProductForm.get('imageUrl').invalid && (createProductForm.get('imageUrl').dirty || createProductForm.get('imageUrl').touched)"
+                   class="alert alert-danger">
+                <span>Le champs ne doit pas être vide</span>
               </div>
-
-              <button type="submit" class="btn btn-primary mt-3" [disabled]="createProductForm.invalid">Submit</button>
-            </form>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3" [disabled]="createProductForm.invalid">Créer</button>
+          </form>
         </div>
       </div>
     </div>
