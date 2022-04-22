@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductService} from "../../product/product.service";
 import {Product} from "../../product/product";
 import { faTrash, faPen } from '@fortawesome/free-solid-svg-icons';
@@ -28,5 +28,19 @@ export class FindAllComponent implements OnInit {
   getAllProducts() {
     this.products = this.productService.getAllProducts();
   }
+  getProductById(id: number) {
+    return this.productService.getProductById(id);
+  }
+
+  displayStyle = "none";
+  productToUpdate: Product;
+
+  openModal(productId: number) {
+    this.displayStyle = "block";
+    this.productToUpdate = this.getProductById(productId);
+  }
+
+
+
 
 }

@@ -8,7 +8,9 @@
             Liste de tout les produits
           </h3>
         </div>
-        <a routerLink="create"><button class="btn btn-primary">Ajouter un produit</button></a>
+        <a routerLink="create">
+          <button class="btn btn-primary mb-3">Ajouter un produit</button>
+        </a>
         <div class="panel-body">
           <div class="row">
             <div class="col-md-12 col-sm-12 table-responsive">
@@ -27,7 +29,7 @@
                   <td>{{product.name}}</td>
                   <td>{{product.price}} €</td>
                   <td>
-                    <span class="btn btn-primary btn-xs">
+                    <span class="btn btn-primary btn-xs mx-3" (click)="openModal(product.id)">
                       <fa-icon [icon]="faPen"></fa-icon>
                     </span>
                     <span class="btn btn-danger btn-xs" (click)="deleteProduct(product)">
@@ -42,6 +44,12 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+<!-- modal -->
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <app-update [product]="productToUpdate" [(displayStyle)]="displayStyle"></app-update>
   </div>
 </div>
 
