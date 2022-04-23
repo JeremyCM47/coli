@@ -29,7 +29,7 @@
                   <td>{{product.name}}</td>
                   <td>{{product.price}} €</td>
                   <td>
-                    <span class="btn btn-primary btn-xs mx-3" (click)="openModal(product.id)">
+                    <span class="btn btn-primary btn-xs mx-3" (click)="openModal(product);activeModal=true">
                       <fa-icon [icon]="faPen"></fa-icon>
                     </span>
                     <span class="btn btn-danger btn-xs" (click)="deleteProduct(product)">
@@ -49,7 +49,7 @@
 <!-- modal -->
 <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
   <div class="modal-dialog" role="document">
-    <app-update [product]="productToUpdate" [(displayStyle)]="displayStyle"></app-update>
+    <app-update *ngIf="activeModal" [product]="productToUpdate" [(displayStyle)]="displayStyle"></app-update>
   </div>
 </div>
 

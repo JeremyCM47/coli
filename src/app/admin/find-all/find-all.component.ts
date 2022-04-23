@@ -13,7 +13,10 @@ export class FindAllComponent implements OnInit {
   faPen = faPen;
   faTrash = faTrash;
 
-  products: Product[]
+  products: Product[];
+  displayStyle = "none";
+  productToUpdate: Product;
+  activeModal: boolean;
 
   constructor(private productService : ProductService) { }
 
@@ -32,15 +35,9 @@ export class FindAllComponent implements OnInit {
     return this.productService.getProductById(id);
   }
 
-  displayStyle = "none";
-  productToUpdate: Product;
-
-  openModal(productId: number) {
+  openModal(product: Product) {
     this.displayStyle = "block";
-    this.productToUpdate = this.getProductById(productId);
+    this.activeModal = false;
+    this.productToUpdate = product;
   }
-
-
-
-
 }
