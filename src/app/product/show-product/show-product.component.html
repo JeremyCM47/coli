@@ -1,21 +1,20 @@
-<!--product page-->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
+            <div class="panel">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{product.name}}</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-4">
-                            <img src="{{product.imageUrl}}" class="img-responsive" alt="image of the product">
+                        <div class="col-md-6">
+                            <img src="{{product.imageUrl}}" class="img-product" alt="{{product.name}}">
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-6">
                             <h4>{{product.name}}</h4>
                             <p>{{product.description}}</p>
-                            <h4>{{product.price}}</h4>
-                            <button class="btn btn-primary" (click)="addToCart(product)">Ajouter au panier</button>
+                            <h4>{{product.price}} €</h4>
+                            <button class="btn btn-primary" (click)="addToCart(product)" data-toggle="popover" data-placement="bottom" data-content="Produit ajouté au panier">Ajouter au panier</button>
                         </div>
                     </div>
                 </div>

@@ -7,7 +7,7 @@ import {CartService} from "../../cart/cart.service";
 @Component({
   selector: 'app-show-product',
   templateUrl: './show-product.component.html',
-  styleUrls: ['./show-product.component.css']
+  styleUrls: ['./show-product.component.scss']
 })
 export class ShowProductComponent implements OnInit {
 
