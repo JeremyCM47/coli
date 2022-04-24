@@ -10,19 +10,34 @@
         <div
           *ngIf="updateProductForm.get('name').invalid && (updateProductForm.get('name').dirty || updateProductForm.get('name').touched)"
           class="alert alert-danger">
+          <span>Le champs ne doit pas être vide</span>
         </div>
       </div>
       <div class="form-group mt-3">
         <label for="price">Price</label>
         <input type="number" class="form-control" id="price" formControlName="price" placeholder="Entrer le prix du produit">
+        <div
+          *ngIf="updateProductForm.get('price').invalid && (updateProductForm.get('price').dirty || updateProductForm.get('price').touched)"
+          class="alert alert-danger">
+          <span>Le champs ne doit pas être vide</span>
+        </div>
       </div>
       <div class="form-group mt-3">
         <label for="description">Description</label>
         <textarea class="form-control" id="description" formControlName="description" placeholder="Description du produit"></textarea>
+        <div *ngIf="updateProductForm.get('description').invalid && (updateProductForm.get('description').dirty || updateProductForm.get('description').touched)"
+             class="alert alert-danger">
+          <span>Le champs ne doit pas être vide</span>
+        </div>
       </div>
       <div class="form-group mt-3">
         <label for="description">URL de l'image</label>
         <input type="text" class="form-control" id="imageUrl" formControlName="imageUrl" placeholder="Url de l'image du produit">
+        <div *ngIf="updateProductForm.get('imageUrl').invalid && (updateProductForm.get('imageUrl').dirty || updateProductForm.get('imageUrl').touched)"
+             class="alert alert-danger">
+          <span>Le champs ne doit pas être vide</span>
+        </div>
+        <img [src]="product?.imageUrl" alt="product" class="img-fluid">
       </div>
 
     </form>
