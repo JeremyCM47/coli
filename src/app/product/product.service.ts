@@ -53,7 +53,7 @@ export class ProductService {
     return this.product.find(product => product.id === id);
   }
   createProduct(product: Product) {
-    product.id = this.product.length + 1;
+    product.id = this.product[this.product.length - 1].id + 1;
     this.product.push(product);
   }
   updateProduct(product: Product) {
